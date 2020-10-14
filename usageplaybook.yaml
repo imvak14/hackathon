@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-  - name: Get ram123
+  - name: Get ram usage
     shell: free -h
     register: result
   - name: Print the var
