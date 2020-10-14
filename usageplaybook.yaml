@@ -7,10 +7,4 @@
   - name: Print the var
     debug: 
      var: result.stdout
-  - name: Get CPU
-    shell: mpstat
-    register: resultc
-  - name: Print the var
-    debug: 
-     var: resultc.stdout
   
