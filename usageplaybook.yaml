@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Get ram
+      shell: free -h
+      register: result
+
+    - name: Print the var
+      debug:
+       var: result.stdout
