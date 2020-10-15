@@ -1,10 +1,16 @@
 ---
 - hosts: localhost
   tasks:
-  - name: Get ram usage
+  - name: Get ram123
     shell: free -h
     register: result
   - name: Print the var
     debug: 
      var: result.stdout
+  - name: Get CPU
+    shell: mpstat
+    register: resultc
+  - name: Print the var
+    debug: 
+     var: resultc.stdout
   
